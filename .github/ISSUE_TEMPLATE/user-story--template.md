@@ -1,5 +1,5 @@
 ---
-name: User Story template
+name: 'USER STORY: Template'
 about: Custom template for project user stories
 title: ''
 labels: ''
