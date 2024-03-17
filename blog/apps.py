@@ -1,6 +1,14 @@
-from django.apps import AppConfig
+from django import forms
+from .models import Comment
 
 
-class BlogConfig(AppConfig):
-    default_auto_field = 'django.db.models.BigAutoField'
-    name = 'blog'
+class CommentForm(forms.ModelForm):
+    """
+    Form class for users to comment on a post 
+    """
+    class Meta:
+        """
+        Specify the django model and order of the fields
+        """
+        model = Comment
+        fields = ('body',)
