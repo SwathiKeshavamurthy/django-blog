@@ -1,14 +1,9 @@
-from django import forms
-from .models import Comment
+from django.apps import AppConfig
 
 
-class CommentForm(forms.ModelForm):
+class BlogConfig(AppConfig):
     """
-    Form class for users to comment on a post 
+    Provides primary key type for blog app
     """
-    class Meta:
-        """
-        Specify the django model and order of the fields
-        """
-        model = Comment
-        fields = ('body',)
+    default_auto_field = 'django.db.models.BigAutoField'
+    name = 'blog'
